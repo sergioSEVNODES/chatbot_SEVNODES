@@ -1,0 +1,147 @@
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+    Chatbot.init({
+        chatflowid: "2fde307e-7613-4b3d-b791-abb0ebdcf8e6",
+        apiHost: "https://ai.sevnodes.es",
+        chatflowConfig: {},
+        observersConfig: {},
+        theme: {
+            button: {
+                backgroundColor: '#FF7A00',
+                right: 24,
+                bottom: 24,
+                size: 58,
+                dragAndDrop: true,
+                iconColor: '#0C223F',
+                customIconSrc: 'https://www.sevnodes.es/wp-content/uploads/2025/08/Logo-Normal-Sin-Fondo-3-e1755731430739.png',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: '¡Hola! ¿Necesitas ayuda? 🚀',
+                tooltipBackgroundColor: '#0C223F',
+                tooltipTextColor: '#FFFFFF',
+                tooltipFontSize: 16
+            },
+
+            disclaimer: {
+                title: 'Aviso Legal',
+                message: "Al utilizar este asistente aceptas los <a target=\"_blank\" href=\"https://www.snwhitehosting.com/es/privacy-policy/\">Términos y Condiciones</a>.",
+                textColor: '#0C223F',
+                buttonColor: '#FF7A00',
+                buttonText: 'Comenzar',
+                buttonTextColor: '#0C223F',
+                blurredBackgroundColor: 'rgba(0,0,0,0.45)',
+                backgroundColor: '#FFFFFF'
+            },
+
+            /* ------------------------------------------------------
+               ✅ CSS COMPLETO: LOGOS CUADRADOS + CHAT CUADRADO
+               ------------------------------------------------------ */
+            customCSS: `
+                /* Botón flotante */
+                .flowise-launcher img {
+                    border-radius: 0 !important;
+                    background: #ffffff !important;
+                    padding: 4px !important;
+                }
+
+                /* Logo del header del chat */
+                .flowise-chatbot-header img {
+                    border-radius: 0 !important;
+                    background: #ffffff !important;
+                    padding: 4px !important;
+                }
+
+                /* Avatar del bot en los mensajes */
+                .flowise-bot-avatar img,
+                .flowise-avatar img {
+                    border-radius: 0 !important;
+                    background: #ffffff !important;
+                    padding: 3px !important;
+                }
+
+                /* Ventana del chat cuadrada */
+                .flowise-chatbot-container,
+                .flowise-chat-window,
+                .flowise-chatbot {
+                    border-radius: 0 !important;
+                }
+            `,
+
+            /* ------------------------------------------------------ */
+
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'Asistente SEVNODES',
+                titleAvatarSrc: 'https://www.sevnodes.es/wp-content/uploads/2025/08/Logo-Normal-Sin-Fondo-3-e1755731430739.png',
+                welcomeMessage: '¡Hola! Soy el asistente oficial de SEVNODES. ¿En qué puedo ayudarte hoy?',
+                errorMessage: 'Ha ocurrido un error. Inténtalo de nuevo.',
+                backgroundColor: '#FFFFFF',
+                height: 700,
+                width: 420,
+                fontSize: 16,
+                starterPrompts: [
+                    "¿Qué servicios ofrece SEVNODES?",
+                    "¿Puedo contactar con soporte técnico?",
+                    "¿Qué soluciones tenéis para empresas?"
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Fuentes:',
+                renderHTML: true,
+
+                botMessage: {
+                    backgroundColor: '#F4F6F9',
+                    textColor: '#0C223F',
+                    showAvatar: true,
+                    avatarSrc: 'https://cdn-icons-png.flaticon.com/128/2333/2333223.png'
+                },
+
+                userMessage: {
+                    backgroundColor: '#FF7A00',
+                    textColor: '#0C223F',
+                    showAvatar: true,
+                    avatarSrc: 'https://cdn-icons-png.flaticon.com/128/3177/3177440.png'
+                },
+
+                textInput: {
+                    placeholder: 'Escribe tu mensaje...',
+                    backgroundColor: '#ffffff',
+                    textColor: '#0C223F',
+                    sendButtonColor: '#FF7A00',
+                    maxChars: 400,
+                    maxCharsWarningMessage: 'Has superado el límite de 400 caracteres.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+
+                feedback: {
+                    color: '#0C223F'
+                },
+
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+
+                footer: {
+                    textColor: '#0C223F',
+                    text: 'By',
+                    company: 'SEVNODES',
+                    companyLink: 'https://www.snwhitehosting.com/'
+                }
+            }
+        }
+    })
+</script>
